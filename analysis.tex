@@ -1,0 +1,47 @@
+\section{Análisis}
+\subsection{Actores}
+Se han identificado dos actores principales los cuales se expondrán a continuación.
+
+\subsubsection{Doctor}
+Personal del centro médico el cual tendrá pacientes a su cargo, sus funciones serán
+las siguientes:
+\begin{itemize}
+    \item Buscar pacientes entre los registrados en el sistema.
+    \item Asignar ejercicios a un paciente.
+    \item Añadir observaciones a los ejercicios que se van a asignar.
+    \item Ver perfil de un paciente.
+    \item Ver evolución de un paciente.
+\end{itemize}
+
+Todas estas funcionalidades tienen como objetivo que el docotor pueda indicarle a sus
+pacientes los ejercicios que este tiene que realizar y si en su caso concreto tendrá
+que tener en cuenta alguna variación del original dejarlo indicado en las observaciones.
+Además tendrá que poder ver el perfil del paciente para poder consultar sus datos, en caso
+de que le fueran necesarios.
+
+\subsubsection{Paciente}
+Otro actor que se ha identificado es el paciente con las siguiente funcionalidad:
+\begin{itemize}
+    \item Ver ejercicio.
+    \item Marcar ejercicio como hecho.
+\end{itemize}
+
+Con esta funcionalidad se busca que el paciente pueda llevar un control de los ejercicios
+que ha realizado y esto pueda ser consultado por el doctor en cualquier momento.
+
+\medskip
+Además estos actores principales tendrán funcionalidades comunes:
+
+\begin{itemize}
+    \item Registro en la aplicación.
+    \item Inicio de sesión.
+    \item Ver perfil.
+    \item Editar perfil.
+    \item Iniciar chat.
+    \item Enviar y visualizar vídeos por el chat.
+\end{itemize}
+
+Estas funciones son necesarias que estén disponibles en ambos actores dado que el chat
+es doctor con paciente y viceversa, además tienen que poder darse de alta en el sistema.
+
+\section{Requisitos}
