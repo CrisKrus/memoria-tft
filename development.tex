@@ -1,3 +1,64 @@
-  \section{Desarrollo}
-%  DESARROLLO: metodologia aplicada y desarrollo de trabajo en sus distintas fases.
-%  Planificacion prevista inicialmente y ajuste a la misma.
+\section{Desarrollo}
+\subsection{Ionic}
+Se expondrá a continuación las razones por las que se
+ha decidido usar ionic como framework de desarrollo para
+este proyecto:
+
+\begin{itemize}
+    \item El código se escribe una vez y se usa en todas
+    las plataformas, con ionic solo se tiene que escribir
+    una vez la lógica que va a seguir y esta puede ser
+    compilada luego en la plataforma que se requiera.
+    \item Los componentes por defecto que trae para el
+    desarrollo de la interfaz dan un buen acabado, sin
+    tener que modificar la mayoría de ellos. Lo que permite
+    ahorrar tiempo en este apartado.
+    \item Se puede comprobar el comportamiento de manera rápida
+    y fácil ya que permite ejecutar la aplicación en un
+    explorador como si se tratase de un dispositivo móvil.
+    Además incluye un apartado donde se puede ver las tres
+    versiones de compilación y comprobar el comportamiento
+    en cada una de ellas por separado sin tener un dispositivo
+    donde instalar la aplicación.
+    \item Gran cantidad de documentación oficial y no oficial
+    así como tutoriales escritos como en vídeo, de buena calidad.
+    \item Lo apoya una gran comunidad y de calidad, lo que hace
+    junto al punto anterior que la búsqueda de una solución a
+    problemas que puedan surgir sea rápida y eficaz.
+    \item Trabaja con tecnologías modernas, con lo que
+    su arquitectura es limpia y robusta.
+    \item Al estar basado en lenguajes básicos y estandarizados
+    hace que su uso resulte en ciertos puntos intuitivo.
+    \item Lleva varios años en el mercado funcionando y tiene
+    cientos de aplicaciones hechas con él, por lo que no es un
+    producto tan nuevo como para que pueda tener grandes fallos.
+\end{itemize}
+
+\subsection{Estructura del proyecto}
+
+Uno de los puntos buenos que tiene este \textit{framework} es
+poseer una estructura de directorios bien conocida y definida,
+por ello será fácil navegar por ella incluso para nuevos
+desarrolladores que se incorporasen al proyecto.
+
+\medskip
+Los principales directorios son los siguientes:
+
+\begin{itemize}
+    \item /src/app/: ficheros de configuración de la aplicación.
+    \item /src/assets/: ficheros multimedia y recursos estáticos.
+    \item /src/enviroments/: ficheros de configuración para los
+    distintos entornos (desarrollo o producción)
+    \item /src/pages/: directorio donde van ubicados los directorios
+    de cada pandalla o componente de la aplicación.
+    \item /src/pages/page1/: ficheros referentes a una pantalla en
+    concreto en el van el HTML, TS, SCSS (si fuese necesario)
+    \item /src/providers/: ficheros de acceso a los datos.
+    \item /src/theme/: fichero de estilo genérico en el cual
+    se basa la aplicación.
+\end{itemize}
+
+% hablar de los distintos tipos de ficheros que hay en el poryecto
+% meter trozos de codigo explicando como va el sistema
+% y hacer tiempo para hacer un par de paginas mas
+% contar la importacia de los buenos nombres
