@@ -1,5 +1,5 @@
 \section{Requisitos}
-Para representar los requisitos de la aplicación se ha usado UML\cite{uml} por varios
+Para representar los requisitos de la aplicación se ha usado UML \cite{uml} por varios
 motivos que se expondrán a continuación. El primero de ellos por estar familiarizados
 con este, al haber sido usado durante el grado en múltiples ocasiones en asignaturas
 distintas. Por otra parte este lenguaje de modelado es un estándar aprobado por la ISO
@@ -13,28 +13,42 @@ requisitos que se quieren implementar en esta fase para no cargar con más infor
 la necesaria hasta el momento. En el apartado mejoras futuras se nombrarán el resto de ellos.
 
 \medskip
+En la figura \ref{casos-de-uso-paciente} se muestran las funcionalidades que el paciente
+tiene disponible. Como se puede ver este dispondrá de la posibilidad de ver los ejercicios
+y una vez complete estos podrá indicar que se han completado.
+
 \begin{figure}
     \includegraphics[width=\linewidth]{./images/requisites/use-case-patient.jpeg}
     \caption{Diagrama casos de uso paciente.}
-    \label{Diagrama casos de uso paciente.}
+    \label{casos-de-uso-paciente}
 \end{figure}
 
 \medskip
+Como podemos observar en la figura \ref{casos-de-uso-doctor} el doctor tendrá a su
+disposición la posibilidad de realizar una búsqueda entre los pacientes, ver su perfil,
+asignar ejercicios y de manera opcional añadirle observaciones a los ejercicios que
+asigna. Por último, podrá evaluar la evolución del paciente.
+
 \begin{figure}
     \includegraphics[width=\linewidth]{./images/requisites/use-case-doctor.jpeg}
     \caption{Diagrama casos de uso doctor.}
-    \label{Diagrama casos de uso doctor.}
+    \label{casos-de-uso-doctor}
 \end{figure}
 
 \medskip
+Tal como se muestra en la figura \ref{casos-de-uso-usuarios} de manera genérica todos los
+usuarios podrán darse de alta e iniciar sesión en el sistema y ver su propio perfil. Además
+de esto, podrán iniciar un chat, enviar mensajes por este, ver los mensajes que se han recibido
+y enviar vídeos.
+
 \begin{figure}
     \includegraphics[width=\linewidth]{./images/requisites/use-case-user.jpeg}
     \caption{Diagrama casos de uso usuarios.}
-    \label{Diagrama casos de uso usuarios.}
+    \label{casos-de-uso-usuarios}
 \end{figure}
 
 \medskip
-En la siguiente tabla se muestran los casos de uso anteriores con una breve descripción.
+En el siguiente cuadro \ref{tabla-requisitos} se muestran los casos de uso anteriores con una breve descripción.
 \begin{table}
     \begin{tabular}{|llp{12cm}|}
         \hline
