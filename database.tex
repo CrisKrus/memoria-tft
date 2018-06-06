@@ -7,11 +7,11 @@ para ello:
     \item Al tratarse de datos no homogéneos en referencia con los
     ejercicios, pues estos pueden tener o no varios pasos, pueden
     tener o no material visual en forma de imágenes o vídeos. Esto
-    ocurre debido a que no están digitalizado de forma alguna a día
+    ocurre debido a que no están digitalizados de forma alguna a día
     de hoy y el propio cliente no sabe como lo hará.
     \item Siguiendo con el punto anterior los propios usuarios
-    no son consistentes, al existir dos tipos de usuarios cada
-    uno de ellos tiene propiedades distintas y relaciones distintas
+    no son consistentes. Existen dos tipos de usuarios y cada
+    uno de ellos tiene relaciones distintas
     con los ejercicios y con los propios usuarios, es por ello que
     las bases de datos no relacionales (NoSQL) presentan una mejora
     respecto de las relacionales.
@@ -23,7 +23,7 @@ para ello:
     peticiones a la base de datos en un primer momento, esta se
     enfoca más en peticiones de "grandes" cantidades de datos la
     mayor parte del tiempo, esto hace que no se pueda aprovechar la
-    potencia de las peticiones SQL\cite{sql}.
+    potencia de las peticiones SQL \cite{sql}.
     \item Una de las funcionalidades que se pedía implementar en el
     proyecto es un sistema de mensajería interna (chat) por el que
     poder comunicarse doctores con pacientes y viceversa, esta
@@ -53,7 +53,7 @@ datos que nos han sido necesarios.
     \label{usuario-con-observaciones}
 \end{figure}
 
-Como se puede ver en la \textbf{figura \ref{usuario-con-observaciones}}
+Como se puede ver en la \textbf{figura \ref{usuario-con-observaciones}},
 los usuarios comparten parámetros comunes de los cuales solamente los que
 se explicarán a continuación pueden generar duda de su utilidad o uso que se
 le ha podido dar. Es el caso de \textit{city}, hace referencia a la ciudad de
@@ -86,7 +86,7 @@ caracteres.
 
 En caso de ser un usuario de tipo doctor este tendrá un objeto en el que
 guarda los identificadores de sus pacientes asignados, como se puede ver
-en la \textbf{figura \ref{usuario-doctor}}
+en la \textbf{figura \ref{usuario-doctor}}.
 
 \medskip
 \begin{figure}
@@ -95,13 +95,35 @@ en la \textbf{figura \ref{usuario-doctor}}
     \label{chat}
 \end{figure}
 
-Para no hacer peticiones de grandes cantidades de datos sin necesidad
-se ha creado un objeto \textit{chats}, como se muestra en la
-\textbf{figura \ref{chat}} en el cual se guardan
-objetos con el ID del usuario y dentro de este el ID del usuario con el
-que se comparte el chat como clave y como valor el ID del chat que comparten
-ambos el cual se explicará a continuación cual es su uso. Como se ha dicho
-esto se ha realizado de esta forma para ahorrar tener que traer todos los
+Para no hacer grandes cantidades de peticiones sin necesidad
+se ha creado un objeto \textit{chats}, el cual se puede ver en la
+\textbf{figura \ref{chat}}. Para explicar mejor como están estructurados
+estos datos se pondrá un ejemplo. Si un usuario \textbf{A} tiene un chat
+iniciado con un usuario \textbf{B} en la base de datos en la parte de chat
+aparecerá la siguiente información:
+
+\smallskip
+\textit{chats/ ID-usuario-A/ [ID-usuario-B: ID-chat]}
+
+\smallskip
+\textit{chats/ ID-usuario-B/ [ID-usuario-A: ID-chat]}
+
+\smallskip
+En caso de que un tercer usuario \textbf{C} inicie un chat con \textbf{A}
+aparecerá una nueva entrada y quedará de la siguiente forma la base de datos:
+
+\smallskip
+\textit{chats/ ID-usuario-A/ [ID-usuario-B: ID-chat], [ID-usuario-C: ID-chat]}
+
+\smallskip
+\textit{chats/ID-usuario-B/[ID-usuario-A: ID-chat]}
+
+\smallskip
+\textit{chats/ID-usuario-C/[ID-usuario-A: ID-chat]}
+
+\smallskip
+Como se ha dicho esto se ha realizado de esta forma para ahorrar
+tener que traer todos los
 mensajes del chat en caso de que un usuario solo quiera visualizar con
 que personas tiene un chat abierto, de esta forma solo hará una petición
 al objeto con su identificador y este le devolverá los ID de los usuarios
@@ -116,7 +138,7 @@ obtener los mensajes.
 \end{figure}
 
 A raíz de la implementación anterior se ha tenido que crear el objeto
-que muestra la \textbf{figura \ref{mensajes-del-chat}} este tiene como
+que muestra la \textbf{figura \ref{mensajes-del-chat}}, este tiene como
 objetivo almacenar todos los mensajes de los chats entre los distintos
 usuarios. Cada chat tiene su identificador único con el que se crea el
 objeto y dentro de este un identificador de mensaje el cual internamente
@@ -134,8 +156,8 @@ una petición al servidor para obtener este dato.
 \end{figure}
 
 Por último en la \textbf{figura \ref{ejercicios}} se ve
-como se ha creado este objeto para los ejercicios donde tener la información
-referente a cada ejercicio como es la edad recomendada del ejercicio,
+como se ha creado el objeto para los ejercicios. En él se almacena la información
+referente a cada ejercicio como puede ser la edad recomendada del ejercicio,
 la descripción del mismo, el tiempo medio que se tarda en realizarlo y el
 título que este tiene. Además todo ello está bajo un objeto que tiene como
 nombre un identificador único para el ejercicio.
