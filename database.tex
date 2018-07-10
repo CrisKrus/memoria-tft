@@ -48,34 +48,22 @@ datos que nos han sido necesarios.
 
 \medskip
 \begin{figure}
-    \includegraphics[width=\linewidth]{./images/database/users-patient-with-observations-database.png}
-    \caption{Estructura en la base de datos del objeto: usuarios (con observaciones en los ejercicios)}
-    \label{usuario-con-observaciones}
+    \includegraphics[width=\linewidth]{./images/database/user-patient.png}
+    \caption{Estructura en la base de datos del objeto: usuarios (paciente)}
+    \label{user-patient}
 \end{figure}
 
-Como se puede ver en la \textbf{figura \ref{usuario-con-observaciones}},
+Como se puede ver en la \textbf{figura \ref{user-patient}},
 los usuarios comparten parámetros comunes de los cuales solamente los que
 se explicarán a continuación pueden generar duda de su utilidad o uso que se
 le ha podido dar. Es el caso de \textit{city}, hace referencia a la ciudad de
 nacimiento del usuario y por otro lado el trío \textit{day-month-year} los
 cuales forman la fecha de nacimiento del usuario en cuestión.
-En este caso el usuario tiene asignados cuatro ejercicios dentro del objeto
-\textit{exercise} a los cuales se les "referencia" guardando su ID y en caso
-de que este tenga observaciones con este paciente, se le añade un parámetro
-interno \textit{observations}.
-
-
-\medskip
-\begin{figure}
-    \includegraphics[width=\linewidth]{./images/database/users-patient-with-exercises-done-database.png}
-    \caption{Estructura en la base de datos del objeto: usuarios (con ejercicios completados)}
-    \label{usuario-con-ejercicios}
-\end{figure}
-
-En esta \textbf{figura \ref{usuario-con-ejercicios}} queda reflejado como
-se guardan las veces que se marca un ejercicio como hecho, guardando como clave
-del parámetro un objeto de tipo fecha y como valor el mismo pero en ristra de
-caracteres.
+En este caso el usuario tiene asignados cinco ejercicios dentro del objeto
+\textit{exercise} a los cuales se les "referencia" guardando como clave su ID.
+Dentro de este objeto cada ejercicio tiene un campo observaciones
+(\textit{observatios}) y un campo completado (\textit{done}) donde se guarda
+la fecha y hora en la que se completó un ejercicio.
 
 \medskip
 \begin{figure}
@@ -85,8 +73,10 @@ caracteres.
 \end{figure}
 
 En caso de ser un usuario de tipo doctor este tendrá un objeto en el que
-guarda los identificadores de sus pacientes asignados, como se puede ver
-en la \textbf{figura \ref{usuario-doctor}}.
+guarda los identificadores de sus pacientes asignados. Como se puede ver
+en la \textbf{figura \ref{usuario-doctor}} estos pacientes tienen asignados
+una fecha y hora, correspondiente a la última hora en la que se visitó su
+perfil.
 
 \medskip
 \begin{figure}

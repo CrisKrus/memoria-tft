@@ -50,6 +50,29 @@ representativos de las mismas. Como son: página principal (\textit{home}),
 chats y mi perfil, respectivamente. En el caso de los doctores, estos tienen
 una pestaña adicional con el icono de una lupa donde podrán buscar entre los
 pacientes registrados en la aplicación.
+
+Además en esta pantalla el usuario pacietne podrá ver los ejercicios que
+tiene asignados. Estos, estarán ordenados según estén completados o no. Los
+ejercicios que ya se han marcado como completados estarán al final de la lista
+en un color gris. Si el usuario pulsa sobre cualquiera de los ejercicios podrá
+ver el material disponible para dicho ejercicio.
+\clearpage
+
+\subsection{Vista ejercicios, paciente}
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{images/screenshots/Paciente-vista-ejercicio-con-observaciones.png}
+    \caption{Vista ejercicio con observaciones, paciente}
+    \label{ejercicio-con-observaciones}
+\end{figure}
+
+Los pacientes al entrar a ver uno de los ejercicios que tiene asignados verá
+la pantalla que se muestra en la figura \ref{ejercicio-con-observaciones}. En
+esta podrá ver las especificaciones del ejercicio tales como la descripción,
+las observaciones que el doctor puede haberle dejado indicadas y el material
+visual que se encuentre disponible. Como pueden ser imágenes o vídeos. Además de
+ello encontrará al final de esta un botón con el que podrá indicar si el
+ejercicio ha sido completado.
 \clearpage
 
 \subsection{Perfil de usuario}
@@ -66,20 +89,18 @@ además al final incluye un botón con el que pueden cerrar la sesión, si así
 lo quisieran.
 \clearpage
 
-\subsection{Vista ejercicios, paciente}
+\subsection{Pantalla principal, doctor}
 \begin{figure}[!h]
     \centering
-    \includegraphics[width=0.5\textwidth]{images/screenshots/Paciente-vista-ejercicio-con-observaciones.png}
-    \caption{Vista ejercicio con observaciones, paciente}
-    \label{ejercicio-con-observaciones}
+    \includegraphics[width=0.5\textwidth]{images/screenshots/doctor-home.png}
+    \caption{Pantalla principal, doctor}
+    \label{doctor-home}
 \end{figure}
 
-Los pacientes al entrar a ver uno de los ejercicios que tiene asignados verá
-la pantalla que se muestra en la figura \ref{ejercicio-con-observaciones}. En
-esta podrá ver las especificaciones del ejercicio tales como la descripción y
-las observaciones que el doctor puede haberle dejado indicadas. Además de
-ello encontrará al final de esta un botón con el que podrá indicar si el
-ejercicio ha sido completado.
+El doctor, cuando inicia la aplicación verá los pacientes que tiene asignados.
+Estos tendrán una marca a la derecha de su nombre si han completado ejercicios
+desde la última vez que el doctor ha revisado su historial. De esta forma podrá
+saber si hay novedades entre sus pacientes, como se puede ver en la figura \ref{doctor-home}.
 \clearpage
 
 \subsection{Vista ejercicios, doctor}
@@ -97,6 +118,48 @@ observaciones que quiera añadir. Para completar la asignación tendrá que
 pulsar en el botón situado al final de la pantalla.
 \clearpage
 
+\subsection{Vista perfil paciente}
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{images/screenshots/doctor-patient-profile.png}
+    \caption{Vista perfil paciente}
+    \label{doctor-patient-profile}
+\end{figure}
+
+Si el doctor entra en el perfil de un paciente podrá pulsar sobre el botón "+"
+situado en la parte inferior derecha en todo momento. Al pulsar sobre ella verá
+las opciones que se muestran en la figura \ref{doctor-patient-profile}. Entre las
+opciones se encuentran: iniciar un chat, asignar ejercicios y ver el historial.
+\clearpage
+
+\subsection{Ver historial del paciente}
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{images/screenshots/doctor-view-history.png}
+    \caption{Historial del paciente}
+    \label{doctor-view-history}
+\end{figure}
+
+En la figura \ref{vista-chats-abiertos} se puede ver el historial de ejercicios de un
+paciente con la fecha y hora en la que se ha completado cada ejercicio.
+\clearpage
+
+\subsection{Asignar ejercicios}
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{images/screenshots/doctor-assign-exercise.png}
+    \caption{Asignar ejercicios}
+    \label{doctor-assign-exercise}
+\end{figure}
+
+En la vista que se muestra en la figura \ref{vista-chats-abiertos} el doctor podrá
+ver de un vistazo los ejecicios que tiene el paciente asignados o no. Si quiere
+asignar un ejercicio sin observaciones podrá pulsar sobre el \textit{checkbox}, de
+igual forma para desasignarlo. Si en lugar de ello pulsa sobre el ejercicio verá todo
+el material disponible del ejercicio y un campo observaciones que podrá completar antes
+de asignar el ejercicio.
+\clearpage
+
 \subsection{Lista de chats}
 \begin{figure}[!h]
     \centering
@@ -106,8 +169,7 @@ pulsar en el botón situado al final de la pantalla.
 \end{figure}
 
 Todos los usuarios tendrán disponible una pantalla donde poder ver los chats
-que tiene activos en ese momento, tal como se muestra en la figura
-\ref{vista-chats-abiertos}.
+que tiene activos en ese momento, tal como se muestra en la figura \ref{vista-chats-abiertos}.
 \clearpage
 
 \subsection{Mensajes de chat}
@@ -123,3 +185,15 @@ En la pantalla para el visionado de los mensajes del chat
 mantiene con otro usuario. Además, se le permite enviar mensajes a este
 completando el recuadro del final de la pantalla y pulsando sobre el botón
 con forma de triángulo tumbado a la derecha.
+
+\subsection{Busqueda paciente}
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{images/screenshots/Doctor-buscar-pacientes.png}
+    \caption{Buscar paciente}
+    \label{doctor-search-patient}
+\end{figure}
+
+Como se muestra en la figura \ref{doctor-search-patient} el doctor podrá buscar
+pacientes. Para ello tendrá que escribir en la barra de búsqueda superior su nombre
+y la lista mostrará los disponibles.
