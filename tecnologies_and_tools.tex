@@ -99,3 +99,35 @@ de las razones por la que se ha decidido usar este \textit{framework}.
     datos variables, es decir, puedan cambiar a lo largo del tiempo. Esto se le ha dado prioridad
     debido a que el cliente aún no tiene claro como quiere guardar los ejercicios.
 \end{itemize}
+
+Como ya se ha mencionado anteriormente se ha decidido usar una base
+de datos no relacional. A continuación se expondrán las razones
+para ello:
+
+\begin{itemize}
+    \item Al tratarse de datos no homogéneos en referencia con los
+    ejercicios, pues estos pueden tener o no varios pasos, pueden
+    tener o no material visual en forma de imágenes o vídeos. Esto
+    ocurre debido a que no están digitalizados de forma alguna a día
+    de hoy y el propio cliente no sabe como lo hará.
+    \item Siguiendo con el punto anterior los propios usuarios
+    no son consistentes. Existen dos tipos de usuarios y cada
+    uno de ellos tiene relaciones distintas
+    con los ejercicios y con los propios usuarios, es por ello que
+    las bases de datos no relacionales (NoSQL) presentan una mejora
+    respecto de las relacionales.
+    \item Otro punto a tener en cuenta ha sido el tener que trabajar
+    con eventos de tiempo, dejar marcas temporales en el instante en
+    el que se ha completado un ejercicio. Esto se soluciona de forma
+    más fácil con este tipo de base de datos.
+    \item Por otro lado esta aplicación no presenta complejidad en
+    peticiones a la base de datos en un primer momento, esta se
+    enfoca más en peticiones de "grandes" cantidades de datos la
+    mayor parte del tiempo, esto hace que no se pueda aprovechar la
+    potencia de las peticiones SQL \cite{sql}.
+    \item Una de las funcionalidades que se pedía implementar en el
+    proyecto es un sistema de mensajería interna (chat) por el que
+    poder comunicarse doctores con pacientes y viceversa, esta
+    funcionalidad es más sencilla solventarla en bases de datos no
+    relacionales.
+\end{itemize}
