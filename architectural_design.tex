@@ -8,7 +8,7 @@
     \label{multilevel-architecture}
 \end{figure}
 
-Se ha usado una aquitectura multinivel partiendo de la base de datos que nos provee
+Se ha usado una arquitectura multinivel partiendo de la base de datos que nos provee
 \textit{firebase} a la cual se conecta la aplicación a través de su API. Esta API
 se consume desde la aplicación con los proveedores de los que dispone Ionic. Para
 posteriormente mostrar la información resultante en la capa de presentación.
@@ -152,7 +152,7 @@ Para almacenar todo el contenido multimedia referente a los ejercicios se ha
 decidido usar \textit{firebsae storage}. Un servicio que nos permite guardar
 todas las ilustraciones y vídeos referentes al prototipo y acceder a ellos en
 todo momento. Este almacenamiento se ha organizado e tal forma que disponemos
-de un directoio principal y dentro de este existen directorios con el nombre
+de un directorio principal y dentro de este existen directorios con el nombre
 del ejercicio al que corresponde el contenido. Cada uno de ellos tiene en su
 interior todo el contenido multimedia referente al ejercicio.
 
@@ -162,5 +162,5 @@ En este apartado se ha usado el diseño propio del que dispone Ionic. Este const
 de vista y proveedor. Los proveedores acceden a la información disponible en el
 servido, le dan formato y la envían a la vista. En este caso en estos proveedores
 contienen algo de lógica del negocio. Esto ocurre porque no se ha podido modificar
-la API que ofrece firebase. La vista recivirá la información preparada por los
+la API que ofrece firebase. La vista recibirá la información preparada por los
 proveedores y la mostrará al usuario para que haga uso de ella.
