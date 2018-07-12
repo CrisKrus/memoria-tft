@@ -10,13 +10,13 @@
 
 Se ha usado una arquitectura multinivel partiendo de la base de datos que nos provee
 \textit{firebase} a la cual se conecta la aplicación a través de su API. Esta API
-se consume desde la aplicación con los proveedores de los que dispone Ionic. Para
+se consume desde la aplicación con los proveedores de los que dispone Ionic, para
 posteriormente mostrar la información resultante en la capa de presentación.
 El problema ha sido a la hora de añadir nueva lógica referente a la aplicación.
 Esta API no permite ser modificada y se ha tenido que incluir cierta lógica de
 negocio en la propia aplicación. Es por ello que para el futuro si se quiere
 implementar este prototipo y que sea escalable, se tendría que desarrollar una
-API propia donde alojar toda la lógica del negocio.
+API propia donde alojar toda la lógica de negocio.
 
 \medskip
 Con ello se aprovecharía de mejor forma las ventajas de esta arquitectura. Como
@@ -151,7 +151,7 @@ nombre un identificador único para el ejercicio.
 Para almacenar todo el contenido multimedia referente a los ejercicios se ha
 decidido usar \textit{firebsae storage}. Un servicio que nos permite guardar
 todas las ilustraciones y vídeos referentes al prototipo y acceder a ellos en
-todo momento. Este almacenamiento se ha organizado e tal forma que disponemos
+todo momento. Este almacenamiento se ha organizado de tal forma que disponemos
 de un directorio principal y dentro de este existen directorios con el nombre
 del ejercicio al que corresponde el contenido. Cada uno de ellos tiene en su
 interior todo el contenido multimedia referente al ejercicio.
